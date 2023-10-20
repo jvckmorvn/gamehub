@@ -14,11 +14,11 @@ function GameCard({game, bgColour}: Props) {
     <Card height='100%'>
       <Image src={getCroppedImageUrl(game.background_image)}/>
       <CardBody bg={bgColour}>
-        <Heading fontSize='2xl'>{game.name}</Heading>
-        <HStack justifyContent='space-between'>
+        <HStack justifyContent='space-between' marginBottom={4}>
           <PlatformIconList platforms={game.parent_platforms.map((p) => p.platform)}/>
           <CriticScore score={game.metacritic}/>
         </HStack>
+        <Heading fontSize='2xl'>{game.name}</Heading>
       </CardBody>
     </Card>
   );
