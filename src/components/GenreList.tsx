@@ -27,7 +27,7 @@ function GenreList({onSelectGenre, selectedGenre}: Props) {
             <Button onClick={() => onSelectGenre(genre)} fontSize='lg' fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'} variant='link'>{genre.name}</Button>
           </HStack>
         </ListItem>
-        ))}
+      ))}
     </List>
   );
 }
