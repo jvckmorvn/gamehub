@@ -12,7 +12,7 @@ function GameCardSkeleton({bgColour}: Props) {
         <SkeletonText/>
       </CardBody>
     </Card>
-  )
+  );
 }
 
 export default GameCardSkeleton;

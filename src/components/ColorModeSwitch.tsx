@@ -12,5 +12,3 @@ function ColorModeSwitch() {
 }
 
 export default ColorModeSwitch;
-
-// #edf2f7

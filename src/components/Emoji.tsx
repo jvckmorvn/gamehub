@@ -18,10 +18,7 @@ function Emoji({rating}: Props) {
     5: {src: bullsEye, alt: 'bull\'s eye', boxSize: '34px'}
   }
 
-  return (
-    <Image {...emojiMap[rating]} marginTop={2}/>
-  )
-  
+  return <Image {...emojiMap[rating]} marginTop={2}/>;
 }
 
 export default Emoji;

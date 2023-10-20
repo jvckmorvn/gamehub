@@ -14,7 +14,7 @@ function GameHeading({gameQuery}: Props) {
 
   return (
     <Heading as='h1' marginY={4} fontSize='5xl'>{heading}</Heading>
-  )
+  );
 }
 
 export default GameHeading;
