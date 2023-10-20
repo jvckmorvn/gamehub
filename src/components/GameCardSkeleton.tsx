@@ -1,5 +1,5 @@
-import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react";
-import GameCardContainer from "./GameCardContainer";
+import { Card, CardBody, Skeleton, SkeletonText } from '@chakra-ui/react';
+import GameCardContainer from './GameCardContainer';
 
 function GameCardSkeleton() {
   return (

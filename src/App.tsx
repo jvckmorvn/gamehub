@@ -20,21 +20,21 @@ function App() {
   return (
     <Grid
       templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`
+        base: `'nav' 'main'`,
+        lg: `'nav nav' 'aside main'`
       }}
       templateColumns={{
         base: '1fr',
         lg: '200px 1fr'
       }}
     >
-      <GridItem gridArea="nav"><NavBar/></GridItem>
-      <Show above="lg">
-        <GridItem gridArea="aside" paddingX={4}>
+      <GridItem gridArea='nav'><NavBar/></GridItem>
+      <Show above='lg'>
+        <GridItem gridArea='aside' paddingX={4}>
           <GenreList selectedGenre={gameQuery.genre} onSelectGenre={genre => setGameQuery({...gameQuery, genre})}/>
         </GridItem>
       </Show>
-      <GridItem gridArea="main">
+      <GridItem gridArea='main'>
         <Flex paddingLeft={10}>
           <Box marginRight={4}>
             <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={platform => setGameQuery({...gameQuery, platform})}/>
