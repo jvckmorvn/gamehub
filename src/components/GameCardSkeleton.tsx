@@ -1,16 +1,17 @@
 import { Card, CardBody, Skeleton, SkeletonText } from '@chakra-ui/react';
-import GameCardContainer from './GameCardContainer';
 
-function GameCardSkeleton() {
+interface Props {
+  bgColour: string;
+}
+
+function GameCardSkeleton({bgColour}: Props) {
   return (
-    <GameCardContainer>
-      <Card>
-        <Skeleton height={200}/>
-        <CardBody>
-          <SkeletonText/>
-        </CardBody>
-      </Card>
-    </GameCardContainer>
+    <Card>
+      <Skeleton height={200}/>
+      <CardBody bg={bgColour}>
+        <SkeletonText/>
+      </CardBody>
+    </Card>
   )
 }
 
