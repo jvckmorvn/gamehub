@@ -15,7 +15,7 @@ function GameGrid({gameQuery}: Props) {
   const bgColour = useColorModeValue('#e2e8f0', '#2d3748');
 
   if (error) {
-    return <Text>{error}</Text>;
+    return <Text>{error.message}</Text>;
   }
 
   return (
@@ -28,7 +28,7 @@ function GameGrid({gameQuery}: Props) {
           <GameCardSkeleton bgColour={bgColour}/>
         </GameCardContainer>
       ))}
-      {data.map((game) => (
+      {data?.results.map((game) => (
         <GameCardContainer key={game.id}>
           <GameCard game={game} bgColour={bgColour}/>
         </GameCardContainer>
