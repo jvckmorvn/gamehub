@@ -1,5 +1,5 @@
 # gamehub
-Video game marketplace built using React
+Video game marketplace built using TypeScript/React
 
 <img width="1728" alt="home page" src="https://github.com/jvckmorvn/gamehub/assets/68481327/62ba35e9-6f46-4b8b-9e2c-33d01f2c92a3">
 <br>
