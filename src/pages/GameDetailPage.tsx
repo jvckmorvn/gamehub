@@ -14,8 +14,6 @@ function GameDetailPage() {
     throw error;
   }
 
-  console.log(game);
-
   return (
     <>
       <Heading>{game.name}</Heading>
