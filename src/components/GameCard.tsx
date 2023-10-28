@@ -13,21 +13,21 @@ interface Props {
 
 function GameCard({game, bgColour}: Props) {
   return (
-    <Card height='100%'>
-      <Image src={getCroppedImageUrl(game.background_image)}/>
-      <CardBody bg={bgColour}>
-        <HStack justifyContent='space-between' marginBottom={4}>
-          <PlatformIconList platforms={game.parent_platforms?.map((p) => p.platform)}/>
-          <CriticScore score={game.metacritic}/>
-        </HStack>
-        <Heading fontSize='2xl'>
-          <Link to={`/games/${game.slug}`}>
+    <Link to={`/games/${game.slug}`}>
+      <Card height='100%'>
+        <Image src={getCroppedImageUrl(game.background_image)}/>
+        <CardBody bg={bgColour}>
+          <HStack justifyContent='space-between' marginBottom={4}>
+            <PlatformIconList platforms={game.parent_platforms?.map((p) => p.platform)}/>
+            <CriticScore score={game.metacritic}/>
+          </HStack>
+          <Heading fontSize='2xl'>
             {game.name}
-          </Link>
-          <Emoji rating={game.rating_top}/>
-        </Heading>
-      </CardBody>
-    </Card>
+            <Emoji rating={game.rating_top}/>
+          </Heading>
+        </CardBody>
+      </Card>
+    </Link>
   );
 }
 
