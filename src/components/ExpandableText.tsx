@@ -20,7 +20,7 @@ function ExpandableText({children}: Props) {
   const summary = expanded ? `${children} ` : `${children.substring(0, limit).trim()}... `;
 
   return (
-    <Text>
+    <Text style={{width: '90%', marginTop: 12, lineHeight: 1.8}}>
       {summary}<Button size='xs' colorScheme='yellow' onClick={() => setExpanded(!expanded)}>{expanded ? 'Show less' : 'Show more'}</Button>
     </Text>
   );
